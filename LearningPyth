@@ -1,1 +1,70 @@
+variable = "Hello World!"
+print(variable)
 
+len(variable)
+print(len(variable))
+
+variable.lower()
+print(variable.lower())
+
+variable.upper()
+print(variable.upper())
+
+variable_1 = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+count_of_l = variable_1.count(3)
+print(f"There are {count_of_l}x 3s")
+
+variable.find("!")
+print(variable.find("!"))
+##12th Character##
+
+variable.find("o")
+print(variable.find("o"))
+##4th Character##
+
+variable_replace=variable.replace("!", "??")
+print(variable_replace)
+##Python Replace String Method##
+
+is_subscribed = True
+
+if is_subscribed:
+  print("Enjoy 10% off!")
+else:
+  print("Become a subscriber!")
+
+##Set points to 7600 so that the else statement's code block runs.##
+points = 7600
+points_needed = 8000
+
+if points >= points_needed:
+  print("You're Level 2!")
+else:
+  left = points_needed - points
+  print("Points till Level 2:")
+  print(left)
+
+hour = 20
+if hour < 12:
+  print("Good morning")
+elif hour < 17:
+  print("Good afternoon")
+elif hour < 21:
+  print("Good evening")
+else:
+  print("Good night")
+
+##IF / ELSE Statements##
+
+is_summer = False
+is_warm = True
+
+if is_summer or is_warm:
+  print("Go for a swim")
+ ##AND / OR Statements##
+
+missing_input = "address"
+no_address = missing_input == "address"
+
+if no_address:
+  print("Please fill in your shipping address")
