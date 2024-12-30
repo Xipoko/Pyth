@@ -1,0 +1,43 @@
+from urllib.request import urlopen
+import json
+
+with urlopen("https://iapi.utopiafiber.com/mdi/get/infrastructure/") as response:
+    for line in response:
+        line = line.decode('utf-8')
+
+        with urlopen("https://iapi.utopiafiber.com/mdi/get/infrastructure/") as response:
+            data = json.loads(response.read().decode('utf-8'))
+            #print(json.dumps(data, indent=2))
+            variable = input("Enter the footprint: ")
+            
+            #for item in data:
+            #    if variable in item.get('swname', ''): # This is the only line that is different from the other file
+            #        print(item.get('swname', '')) # This is the only line that is different from the other file'))
+            #        break 
+
+            #for item in data:
+            #    if variable in item.get('swname', ''):
+            #       print(item.get('ip', ''))
+            #        break
+
+            #for item in data:
+            #    if variable in item.get('swname', ''):
+            #        print(f"Device: {item.get('swname', '')}, IP Address: {item.get('ip', '')}")
+            #        break
+
+            for item in data:
+                if 'Active' in item.get('status', '') and variable.upper() in item.get('swname', ''):
+                    print(f"Active Device: [{item.get('swname', '')},] Make: [{item.get('make', '')},] IP Address: [{item.get('ip', '')}]")
+                    
+            for item in data:
+                if 'Active' in item.get('status', '') and variable.lower() in item.get('swname', ''):
+                    print(f"Active Device: [{item.get('swname', '')},] Make: [{item.get('make', '')},] IP Address: [{item.get('ip', '')}]")
+            
+            for item in data:
+                if 'Retired' in item.get('status', '') and variable.upper() in item.get('swname', ''):
+                    print(f"Retired Device: [{item.get('swname', '')},] Make: [{item.get('make', '')},] IP Address: [{item.get('ip', '')}]")
+
+            for item in data:
+                if 'Retired' in item.get('status', '') and variable.lower() in item.get('swname', ''):
+                    sort = sorted(item.get('swname', ''))
+                    print(f"Retired Device: [{item.get('swname', '')},] Make: [{item.get('make', '')},] IP Address: [{item.get('ip', '')}]")
