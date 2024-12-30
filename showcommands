@@ -1,0 +1,49 @@
+#show port command
+def show_port(showport):
+  showport = "show port " + showport
+  return showport
+
+port = show_port("1/1/1")
+
+#
+def show_ports():
+    for i in range(1, 49):
+        port = f"1/1/{i}"
+        command = show_port(port)
+        print(command)
+
+show_ports()
+
+#show service fdb-mac | match 1/1/1 - 1/1/49
+
+def show_service_fdb(servicefdb):
+  servicefdb = "show service fdb-mac | match " + servicefdb
+  return servicefdb
+
+mac = show_service_fdb("1/1/1")
+
+def show_service_fdb_mac():
+    for i in range(1, 49):
+        mac = f"1/1/{i}"
+        mac_request = show_service_fdb(mac)
+        print(mac_request)
+
+show_service_fdb_mac()
+
+#show service sap-using sap
+def show_service_sap(sap):
+  sap = "show service sap-using sap | match " + sap
+  return sap
+
+servicesap = show_service_sap("1/1/1")
+
+def show_service_sap_using_sap():
+    for i in range(1, 49):
+        servicesap = f"1/1/{i}"
+        sap_request = show_service_sap(servicesap)
+        print(sap_request)
+
+show_service_sap_using_sap()
+
+
+
