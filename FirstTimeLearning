@@ -1,0 +1,444 @@
+variable = "Hello World!"
+print(variable)
+
+len(variable)
+print(len(variable))
+
+variable.lower()
+print(variable.lower())
+
+variable.upper()
+print(variable.upper())
+
+variable_1 = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+count_of_l = variable_1.count(3)
+print(f"There are {count_of_l}x 3s")
+
+variable.find("!")
+print(variable.find("!"))
+##12th Character##
+
+variable.find("o")
+print(variable.find("o"))
+##4th Character##
+
+variable_replace=variable.replace("!", "??")
+print(variable_replace)
+##Python Replace String Method##
+
+is_subscribed = True
+
+if is_subscribed:
+  print("Enjoy 10% off!")
+else:
+  print("Become a subscriber!")
+
+##Set points to 7600 so that the else statement's code block runs.##
+points = 7600
+points_needed = 8000
+
+if points >= points_needed:
+  print("You're Level 2!")
+else:
+  left = points_needed - points
+  print("Points till Level 2:")
+  print(left)
+
+hour = 20
+if hour < 12:
+  print("Good morning")
+elif hour < 17:
+  print("Good afternoon")
+elif hour < 21:
+  print("Good evening")
+else:
+  print("Good night")
+
+##IF / ELSE Statements##
+
+is_summer = False
+is_warm = True
+
+if is_summer or is_warm:
+  print("Go for a swim")
+ ##AND / OR Statements##
+
+missing_input = "address"
+no_address = missing_input == "address"
+
+if no_address:
+  print("Please fill in your shipping address")
+
+##Rather than rewriting the variable's name, we can use the += operator to add a number with sales += 1.##
+sales = 5
+sales += 1
+
+
+print(sales)
+
+##To subtract from a variable's value, we use the -= operator.##
+sales = 5
+sales -= 3
+
+print(sales)
+
+##Subtract one from the lives variable's value.##
+lives = 2
+lives = lives - 1
+print("Lives left:")
+print(lives)
+
+lives = lives - 1
+print("Lives left:")
+print(lives)
+print("Game over!")
+
+#Console output#
+#Lives left:
+#1
+#Lives left:
+#0
+#Game over!
+
+##Loops##
+##The loop runs its entire code block because keep_going is True at first, but doesn't run again if we set keep_going to False.##
+keep_going = True
+
+while keep_going:
+  print("and again")
+  
+  keep_going = False
+ 
+  print("one more time")
+
+#Controling While Loops#
+#Inside the code block, we make the condition return False and stop the loop by incrementing the counter variable.
+#In this case += increases the value of the counter variable by 1 each time the loop runs. Try it with counter += 1.
+counter = 1
+
+while counter <= 4:
+  print(counter)
+  counter += 1
+ 
+#The order of your code affects what the console displays. Place counter += 1 first, to display 6 to 10.
+counter = 5
+while counter < 10: 
+    counter += 1
+    print(counter)
+
+#We know how to repeat code using a while loop. Like this program repeating statements to display The American Flag.
+first_counter = 0
+
+while first_counter < 5: 
+  print("**********---------")
+  first_counter += 1
+
+second_counter = 0
+
+while second_counter < 4:
+  print("-------------------")
+  second_counter += 1
+
+#For Loop#
+#Using for loops, we can write programs with much less code and make it easier for other programmers to understand.
+for i in range (4):
+  print("**********---------")
+
+for i in range (4):
+  print("-------------------")
+
+#The variable before #in#, in this case, #i#, is the counter variable. It counts what repetition of the loop we're currently on.
+for i in range(3):
+  print(i)
+  print("For loops are great!")
+
+#Quiz#
+counter = 1
+while counter < 5:
+  print(counter)
+  counter += 1
+
+#LISTS##
+#The values or data inside a list are called elements. "Read", "Workout", and "Code" are elements of this list.
+
+todo = ["Read", "Workout", "Code"]
+print(todo)
+
+#Indices start at zero and increase with each further value. That means that the second element in temperatures is at index [1].
+temperatures = [17, 20, 26, 24]
+print(temperatures[1])
+
+#Let's learn how to add and remove values in a list. Like in this app, which uses a list to manage user's score data.
+#To add the value 25 to a list, we code the list name followed by a period ., then the instruction append(25).
+scores = [24, 23]
+scores.append(25)
+print(scores)
+
+#We add a value to a specific index with insert(). By coding insert(0, "lemon"), we'll add the value to the start of the list.
+#The insert() function has two parameters. First, the index where we want to insert the value, followed by the value.
+#insert(1, "chocolate") adds a value in the second position.
+shopping = ["kiwis", "peas"]
+shopping.insert(0, "lemon")
+
+print(shopping)
+
+#insert(1, "chocolate") adds a value in the second position.
+shopping = ["kiwis", "peas"]
+shopping.insert(0, "lemon")
+shopping.insert(1, "chocolate")
+print(shopping)
+
+#For both append() and insert(), we can only add one element at a time.
+
+initials = ["RM", "LP"]
+initials.append("LC")
+initials.insert(1, "LS")
+print(initials)
+
+#To remove the last element of a list, we code the list name todo, a period ., and the instruction pop().
+todo = ["call mom", "dishes"]
+todo.pop()
+
+print(todo)
+
+#To remove a value at a specific index, we add the index we want to remove in parentheses, like pop(1).
+todo = ["call mom", "dishes", "painting"]
+todo.pop(1)
+print(todo)
+
+#The removed value can be stored inside a variable too. We can see it here when we code print(removed).
+todo = ["call mom", "dishes", "painting"]
+removed = todo.pop(0)
+print(removed)
+
+#Create a variable named best. Remove the last value from the list and store it in best.
+pace = [4.5, 4, 5, 5.2]
+best = pace.pop()
+
+print(best)
+
+#There's an easy way to loop through all the elements of list by using a for loop.
+#The loop will run for as many elements as there are in the list. We'll see four elements in the console here by coding print(score).
+
+final_scores = [17, 22, 34, 13]
+
+for score in final_scores:
+  print(score)
+
+minutes_worked = [123, 100, 99, 67]
+
+for minutes in minutes_worked:
+  print(minutes - 60)
+
+#We use the len() instruction with the list name in parentheses to get the number of elements in a list.
+users = ["Sarah", "Mike", "Ella"]
+print(len(users))
+
+#We can store the length of a list in a variable, like here with number_of_users.
+users = ["Sarah", "Mike", "Ella"]
+number_of_users = len(users)
+print(number_of_users)
+
+#We can use list length to create conditional statements based on the number of elements, like here with len(tasks) > 0
+tasks = ["dishes", "windows", "vacuum"]
+
+if len(tasks) > 0:
+    print("Ugh, more work!")
+
+#We can reuse the results of min() and max() by saving them in variables.
+scores = [3, 6, 1, 12]
+min_score = min(scores)
+max_score = max(scores)
+
+
+print(max_score)
+print(min_score)
+
+#When using sort() on a list of numbers like scores, the numbers are sorted in ascending order.
+scores = [3, 6, 1, 12]
+scores.sort()
+
+print(scores)
+
+#Display sold_tickets, sort the list, and then display it again to see the difference.
+sold_tickets = [7, 20, 12, 30]
+print(sold_tickets)
+sold_tickets.sort()
+print(sold_tickets)
+
+#Reversing a sequence in Python
+sequence = [1, 2, 3, 4, 5]
+reverse_sequence = sequence[::-1]
+print(sequence)
+print(reverse_sequence)
+
+#Save the total amount of sugar needed for a cake recipe in the variable total.
+sugar = [120, 50]
+total = sum(sugar)
+print(total)
+
+#Code + to join the two lists storing a plant's growth rate.
+
+growth_rate_1 = [0.5, 0.7, 0.8]
+growth_rate_2 = [0.8, 0.6, 0.6]
+combine = growth_rate_1 + growth_rate_2
+combine.sort()
+print(combine)
+
+#Join the lists t⁠e⁠a⁠m⁠_⁠1 and t⁠e⁠a⁠m⁠_⁠2 so that the player names and scores are printed in a single list.
+team_1 = ["Ana", 78, "Joe", 80]
+team_2 = ["Kim", 57, "Sam", 60]
+print(team_1 + team_2)
+
+#To count how often "yes" appears in the answers list, we code "yes" between the parentheses of count().
+answers = ["yes", "no", "sometimes", "yes", "no"]
+print(answers.count("yes"))
+
+#If we don't want to know the exact number, but only if an element like "sugar" exists, we use the in keyword.
+ingredients = ["flour", "butter", "sugar", "eggs"]
+print("sugar" in ingredients)
+
+#Checking if an element like "sugar" is in a list like "ingredients" gives us a boolean, either True or False.
+ingredients = ["flour", "butter", "sugar", "eggs"]
+print("sugar" in ingredients)
+print("chocolate" in ingredients)
+
+#We can reuse the returned boolean by storing it in a variable like has_sugar.
+ingredients = ["flour", "butter", "sugar", "eggs"]
+has_sugar = "sugar" in ingredients
+print(has_sugar)
+
+#We've stored the values in new_users as individual elements inside users_list. We can display them by coding print(users_list).
+#Strings are separated on whitespace by default.
+new_users = "Ann Jon Alex"
+users_list = new_users.split()
+print(users_list)
+
+#We can specify exactly how we want to split a string by placing a separator inside the parentheses, like with "," here.
+user = "Lauren,25,F,Architect"
+user_1 = user.split(",")
+print(user_1)
+
+#Split the path string with the separator "/".
+path = "mimo.org/course/python"
+path_list = path.split("/")
+print(path_list)
+
+#By coding print(special), we can see that the value of the original variable does not change.
+special = "Today's special is pasta"
+new_special = special.replace("pasta","pizza")
+print(new_special)
+print(special)
+
+#For a start, we can use variables inside functions. Like creating  name = "Ron" and using it in the display statement.
+def greet_ron():
+  name = "Ron"
+  print(f"Hello, {name}")
+greet_ron()
+
+#How would we greet another person? We could create and call a new function greet_leslie() with similar code.
+def greet_ron():
+  name = "Ron"
+  print(f"Hello, {name}")
+greet_ron()
+def greet_leslie():
+  name = "Leslie"
+  print(f"Hello, {name}")
+greet_leslie()
+
+#Instead of writing two functions, we can pass specific information like "Leslie" to just one function, without repeating code.
+def greet(name):
+  print(f"Hello, {name}")
+greet("April")
+greet("Leslie")
+
+def lamp_status():
+  power = True
+  print(f"Powered On:{power}")
+lamp_status()
+
+#Add the function name display_half and the parameter number.
+def display_half(number):
+  half = number / 2
+  print(half)
+display_half(10)
+
+#We can use the return value of a function like any value by calling the function. Here, we call age_label("22") to use its value.
+def age_label(age):
+  label = "User age: " + age
+  return label
+print(age_label("22"))
+
+#If we don't include a return statement, the function returns the value None instead.
+#def age_label(age):
+  #label = "User age: " + age
+
+#result = age_label("29")
+#print(result)
+
+##########
+def add_greeting(user):
+  greeting = "Greetings " + user
+  return greeting
+
+result = add_greeting("Saoirse")
+print(result)
+
+def show_port(showport):
+  showport = "show port " + showport
+  return showport
+
+port = show_port("1/1/1")
+print(port)
+
+#Return half_again from the function.
+def half_twice(number):
+  half = number / 2
+  half_again = half / 2
+  return half_again
+
+result = half_twice(12)
+print(result)
+
+#Call the add_ten() function with a value.
+def add_ten(number):
+  total = 10 + number
+  return total
+
+print(add_ten(20))
+
+#Create the result variable and store the return value of the function inside.
+def sign_up(user):
+  status = user + " signed up"
+  return status
+
+result = sign_up("Desmond")
+print(result)
+
+#To add more parameters to a function, we code a comma followed by the next parameter's name, like last for the last name.
+def display(first, last):
+  print(first + " " + last)
+ 
+display("Alex", "Morgan")
+
+#What if we wanted our function to make a decision, like adding shipping cost or not, but based on if the cart has a certain value or not?
+def add_shipping(cart):
+  if cart < 100:
+    print(f"Total: {cart + 10}")
+  else:
+    print(f"Total: {cart}")
+add_shipping(45)
+add_shipping(200)
+
+#What values are the if statement's condition comparing in the example below?
+
+def can_drive(age):
+  if age >= 18:
+    print("Yes they can!")
+can_drive(19)
+
+#Console output
+#Yes they can!
+
+# 1: It compares 19 for age with 18 ***********
+# 2: It compares a random age value with 18
